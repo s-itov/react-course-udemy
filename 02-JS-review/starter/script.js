@@ -143,6 +143,7 @@ function getBook(id) {
     return data.find((d) => d.id === id);
 }
 
+/*
 const book = getBook(1);
 
 //Destructuring properties from an object - the variables must be exact the same names as the properties of the object
@@ -165,3 +166,17 @@ newBook
 const pagesRange = pages > 1000 ? 'over thousand' : 'less then thousand';
 
 pagesRange 
+*/
+
+const books = getBooks();
+
+const bookTitles = books.map((book) => book.title);
+
+console.log(bookTitles);
+
+const essentialData = books.map((book) => ({
+    author: book.author,
+    title: book.title,
+}));
+
+console.log(essentialData);
