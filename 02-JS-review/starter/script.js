@@ -180,3 +180,7 @@ const essentialData = books.map((book) => ({
 }));
 
 console.log(essentialData);
+
+const longestBook = books.filter(book => book.pages >= 600 && book.hasMovieAdaptation).map(book => book.title);
+
+longestBook
