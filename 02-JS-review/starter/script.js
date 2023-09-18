@@ -168,6 +168,7 @@ const pagesRange = pages > 1000 ? 'over thousand' : 'less then thousand';
 pagesRange 
 */
 
+/*
 const books = getBooks();
 
 const bookTitles = books.map((book) => book.title);
@@ -210,3 +211,19 @@ bookAfterDelete
 
 const bookAfterUpdate = bookAfterDelete.map((book) => book.id === 5 ? { ...book, pages: 12 } : book);
 bookAfterUpdate;
+
+*/
+
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+
+
+async function getTodos() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data = await res.json();
+
+    console.log(data);
+}
+
+getTodos();
