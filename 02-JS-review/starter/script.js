@@ -195,3 +195,18 @@ sorted;
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
 
 sortedByPages;
+
+const newBook = {
+    id: 6,
+    title: 'Harry Potter and the Chamber of Secrets',
+    author: 'J. K. Rowling',
+};
+
+const bookAfterAdd = [...books, newBook];
+bookAfterAdd
+
+const bookAfterDelete = bookAfterAdd.filter((book) => book.id !== 3);
+bookAfterDelete
+
+const bookAfterUpdate = bookAfterDelete.map((book) => book.id === 5 ? { ...book, pages: 12 } : book);
+bookAfterUpdate;
