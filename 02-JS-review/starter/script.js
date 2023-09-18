@@ -172,15 +172,26 @@ const books = getBooks();
 
 const bookTitles = books.map((book) => book.title);
 
-console.log(bookTitles);
-
 const essentialData = books.map((book) => ({
     author: book.author,
     title: book.title,
 }));
 
-console.log(essentialData);
-
 const longestBook = books.filter(book => book.pages >= 600 && book.hasMovieAdaptation).map(book => book.title);
 
 longestBook
+
+const allPages = books.reduce((sum, book) => sum + book.pages, 0);
+
+allPages;
+
+const arr = [1, 5, 6, 1, 7];
+
+const sorted = arr.slice().sort((a, b) => a - b);
+
+arr;
+sorted;
+
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+
+sortedByPages;
