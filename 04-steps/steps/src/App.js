@@ -9,7 +9,7 @@ const messages = [
 export default function App() {
 
     const [step, setStep] = useState(1);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     function handlePrevious() {
         if (step > 1) {
@@ -23,8 +23,11 @@ export default function App() {
         }
     }
 
+
+
     return (
         <>
+            <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;</button>
             {isOpen && (
                 <div className="steps">
                     <div className="numbers">
